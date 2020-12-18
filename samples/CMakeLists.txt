@@ -7,7 +7,7 @@ foreach(sample_filename ${samples_list})
   get_filename_component(sample ${sample_filename} NAME_WE)
 
   # Add and configure executable file to be produced
-  add_executable(${sample} ${sample_filename})
+  add_executable(${sample} ${sample_filename} efficiency_test.cpp)
   target_link_libraries(${sample} ${MP2_LIBRARY})
   set_target_properties(${sample} PROPERTIES
     OUTPUT_NAME "${sample}"
